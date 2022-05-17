@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Retro Hambi - Rendelés</title>
+</head>
+
+<body>
+    <div class="container" style="padding: 20px 20px; background-color: white;">
+        <!--menu-->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="d-grid gap-2">
+                    <a class="btn myButton" type="button" href="index.html">Elérhetőség</a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="d-grid gap-2">
+                    <a class="btn myButton" type="button" href="menu.html">Étlap</a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="d-grid gap-2">
+                    <a class="btn myButton" type="button" href="order.html">Rendelés</a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="d-grid gap-2">
+                    <a class="btn myButton" type="button" href="discount.html">Akciók</a>
+                </div>
+            </div>
+        </div>
+        <!--end menu-->
+
+        <div class="row" style="padding: 20px 20px">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div>Rendelés feladás</div>
+                <form>
+                    <div class="mb-3 border border-2" style="padding: 20px">
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Név:</label>
+                            <input type="text" class="form-control" id="userName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="userEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userAddress" class="form-label">Szállítási cím:</label>
+                            <input type="text" class="form-control" id="userAddress">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userComment" class="form-label">Megjegyzés:</label>
+                            <textarea class="form-control" id="userComment" rows="3"></textarea>
+                        </div>
+                        <label for="sous" class="form-label">Szószok:</label>
+                        <select class="form-select" id="sous">
+                            <option selected>Válassz szót a buri-ba...</option>
+                            <option value="1">Ketchup</option>
+                            <option value="2">Mustár</option>
+                            <option value="3">BBQ</option>
+                          </select>
+
+
+                        <button type="submit" class="btn myButton">Rendelés</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Elite;
+    src: url("/fonts/SpecialElite-Regular.ttf");
+}
+
+body {
+    background-color: orange;
+    font-family: "Elite";
+}
+
+h1 {
+    margin: 20px 20px;
+}
+.myButton {
+    color: orange;
+    background-color: brown;
+}
+
+.myButton:hover {
+    color: brown;
+    background-color: orange;
+}
