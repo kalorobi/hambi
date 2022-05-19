@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/validate.js"></script>
+
     <title>Retro Hambi - Rendelés</title>
 </head>
 
@@ -41,7 +44,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
                 <div>Rendelés feladás</div>
-                <form>
+                <form action="">
                     <div class="mb-3 border border-2" style="padding: 20px">
                         <div class="mb-3">
                             <label for="userName" class="form-label">Név:</label>
@@ -59,18 +62,28 @@
                             <label for="userComment" class="form-label">Megjegyzés:</label>
                             <textarea class="form-control" id="userComment" rows="3"></textarea>
                         </div>
-                        <label for="sous" class="form-label">Szószok:</label>
-                        <select class="form-select" id="sous">
-                            <option selected>Válassz szót a buri-ba...</option>
-                            <option value="1">Ketchup</option>
-                            <option value="2">Mustár</option>
-                            <option value="3">BBQ</option>
-                          </select>
+                        <div class="mb-3">
+                            <label for="sous" class="form-label">Szószok:</label>
+                            <select class="form-select" id="sous">
+                                <option selected>Válassz szót a buri-ba...</option>
+                                <option value="1">Ketchup</option>
+                                <option value="2">Mustár</option>
+                                <option value="3">BBQ</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderQuantity" class="form-label">Rendelési mennyiség:</label>
+                            <input type="number" class="form-control" id="orderQuantity" value="0">
+                            <div id="quantityHelp" class="form-text">min. 1db max. 10 db buri rendelhető</div>
+                        </div>
 
 
-                        <button type="submit" class="btn myButton">Rendelés</button>
+
                     </div>
                 </form>
+                <button class="btn myButton" onclick="validateForm()">Rendelés</button>
+                <div id="price" style="display: inline">Fizetendő: 0 Ft</div>
+                <div id="orderAlert" style="margin-top: 20px"></div>
             </div>
             <div class="col-sm-3"></div>
         </div>
