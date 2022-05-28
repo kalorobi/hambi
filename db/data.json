@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Nagy Pityu",
+      "email": "pityu@nagy.hu",
+      "age": "42"
+    },
+    {
+      "id": "2",
+      "name": "Nagy János",
+      "email": "jani@nagy.hu",
+      "age": "9"
+    },
+    {
+      "id": "3",
+      "name": "Kiss Máté",
+      "email": "mate@kiss.hu",
+      "age": "38"
+    },
+    {
+      "name": "Kiss Endre",
+      "email": "endre@kkiss.hu",
+      "age": 1,
+      "id": "4"
+    }
+  ],
+  "menu": [
+    {
+      "name": "Sima hambi",
+      "price": "2000",
+      "top": "marha, saláta, hagyma"
+    },
+    {
+      "name": "Sajtos hambi",
+      "price": "2500",
+      "top": "marha, saláta, hagyma, sajt"
+    },
+    {
+      "name": "Magyaros hambi",
+      "price": "2600",
+      "top": "marha, saláta, hagyma, bab"
+    },
+    {
+      "name": "Extra hambi",
+      "price": "3000",
+      "top": "marha, saláta, hagyma, sajt, bacon"
+    },
+    {
+      "name": "Vegahambi",
+      "price": "2000",
+      "top": "saláta, hagyma, uborka"
+    }
+  ]
+}

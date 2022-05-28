@@ -1,3 +1,11 @@
+let orderForm = document.querySelector("#orderForm");
+orderForm.addEventListener("submit", function(ev){
+    ev.preventDefault();
+});
+
+let buttonSubmit = document.querySelector("#buttonSubmit");
+buttonSubmit.addEventListener("click", validateForm);
+
 function validateForm() {
     let userName = document.querySelector("input#userName").value;
     let userEmail = document.querySelector("input#userEmail").value;
@@ -29,7 +37,7 @@ function validateQuantity(quantity) {
     let error = "";
 
     if (quantity < 1 || quantity > 10) {
-        error = "min 1db, max 10db buri rendelhető! Légy szíves javítsd!"
+        error = "Minimu 1db, maximum 10db buri rendelhető! Légy szíves javítsd!"
     }
 
     return error;
@@ -39,10 +47,15 @@ function errorMessage(error){
     let alert = document.querySelector("div#orderAlert");
 
     alert.innerHTML = "<div class='alert alert-danger' role='alert'>" + error +"</div>";
+    alert.pare
 }
 
 function orderMessage() {
     let alert = document.querySelector("div#orderAlert");
 
     alert.innerHTML = "<div class='alert alert-success' role='alert'>Rendelés elküldve!</div>";  
+}
+
+function calcPrice(orderQuantity){
+
 }

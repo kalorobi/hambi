@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Retro Hambi - étlap</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Retro Hambi - étlap</title>
 </head>
+
 <body>
-    <div class="container" style="padding: 20px 20px; background-color: white;">
-      <!--menu-->
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="d-grid gap-2">
-            <a class="btn myButton" type="button" href="index.html">Elérhetőség</a>
-          </div>
+  <div class="container p-3" style="background-color: white;">
+    <!--menu-->
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="d-grid gap-2">
+          <a class="btn myButton" type="button" href="index.html">Elérhetőség</a>
         </div>
-        <div class="col-sm-3">
-          <div class="d-grid gap-2">
-            <a class="btn myButton" type="button" href="menu.html">Étlap</a>
-          </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="d-grid gap-2">
+          <a class="btn myButton" type="button" href="menu.html">Étlap</a>
         </div>
-        <div class="col-sm-3">
-          <div class="d-grid gap-2">
-            <a class="btn myButton" type="button" href="order.html">Rendelés</a>
-          </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="d-grid gap-2">
+          <a class="btn myButton" type="button" href="order.html">Rendelés</a>
         </div>
-        <div class="col-sm-3">
-          <div class="d-grid gap-2">
-            <a class="btn myButton" type="button" href="discount.html">Akciók</a>
-          </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="d-grid gap-2">
+          <a class="btn myButton" type="button" href="discount.html">Akciók</a>
         </div>
-      </div> <!--end menu-->
-  
-    menu
-  
-  
+      </div>
     </div>
-  
-  
-  </body>
+    <!--end menu-->
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <table class="table table-hover caption-top" style="font-size: 12px">
+          <caption>Étlap</caption>
+          <thead>
+            <tr>
+              <th>Hambi</th>
+              <th>feltét</th>
+              <th>ár</th>
+            </tr>
+          </thead>
+          <tbody id="menuTable">
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+
+  <script src="js/menu.js"></script>
+</body>
+
 </html>
