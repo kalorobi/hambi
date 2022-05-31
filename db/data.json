@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Nagy Pityu",
-      "email": "pityu@nagy.hu",
-      "age": "42"
-    },
-    {
       "id": "2",
       "name": "Nagy János",
       "email": "jani@nagy.hu",
@@ -23,6 +17,12 @@
       "email": "endre@kkiss.hu",
       "age": 1,
       "id": "4"
+    },
+    {
+      "id": 6,
+      "name": "Mókus Misi",
+      "email": "mogyi@makk.hu",
+      "age": 51
     }
   ],
   "menu": [

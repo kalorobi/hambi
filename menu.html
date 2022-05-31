@@ -12,6 +12,36 @@
 
 <body>
   <div class="container p-3" style="background-color: white;">
+
+    <div class="widget">
+      <div class="row p-2">
+        <div class="col-sm-3">
+          <div>Mai</div>
+          <div>hőmérsékelt:</div>
+          <div id="temp"></div>
+        </div>
+        <div class="col-sm-3">
+          <select id="daySelect">
+            <option value="hetfo">hétfő</option>
+            <option value="kedd">kedd</option>
+            <option value="szerda">szerda</option>
+            <option value="csutortok">csütörtök</option>
+            <option value="pentek">péntek</option>
+            <option value="szombat">szombat</option>
+            <option value="vasarnap">vasárnap</option>
+          </select>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-secondary btn-sm" type="button" id="widgetButton" onclick="widget()">lekérdez</button>
+        </div>
+        <div class="col-sm-3">
+          <div>választott:</div>
+          <div id="selectedDayTemp">-</div>
+          <div id="offer">-</div>
+        </div>
+      </div>
+    </div>
+
     <!--menu-->
     <div class="row">
       <div class="col-sm-3">
@@ -58,6 +88,8 @@
   </div>
 
   <script src="js/menu.js"></script>
+  <script src="js/widget.js"></script>
+
 </body>
 
 </html>
