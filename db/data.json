@@ -4,7 +4,7 @@
       "id": "2",
       "name": "Nagy János",
       "email": "jani@nagy.hu",
-      "age": "9"
+      "age": "99"
     },
     {
       "id": "3",
@@ -13,13 +13,13 @@
       "age": "38"
     },
     {
+      "id": "4",
       "name": "Kiss Endre",
       "email": "endre@kkiss.hu",
-      "age": 1,
-      "id": "4"
+      "age": "11"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Mókus Misi",
       "email": "mogyi@makk.hu",
       "age": 51

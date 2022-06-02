@@ -59,8 +59,10 @@ function delUser(id) {
 }
 
 function refUser(data) {
+    let id = parseInt(data.id);
+
     let fetchOption = {
-        method: "POST",
+        method: "PUT",
         mode: "cors",
         cache: "no-cache",
         headers: {
@@ -68,7 +70,7 @@ function refUser(data) {
         },
         body: JSON.stringify(data)
     };
-    fetch(server + "/" + data.id, fetchOption)
+    fetch(server + `/${id}`, fetchOption)
         .then(
             resp => resp.json(),
             err => console.error(err)
@@ -93,29 +95,47 @@ function delUserEvent(event) {
 
 function refUserEvent(event) {
     let refTr = event.parentElement.parentElement.parentElement;
+    let refBtn = refTr.querySelector("[name='refButton']");
 
     for (let k of refTr.cells) {
-        if (k.firstChild.name == "name" || k.firstChild.name == "email" || k.firstChild.name == "age") {
+        if (k.firstChild.name == "name" ||
+            k.firstChild.name == "email" ||
+            k.firstChild.name == "age") {
             k.firstChild.disabled = false;
         }
     }
 
-    console.log(refTr.cells[4].childNodes[0].childNodes[1]);
-    
-    refTr.cells[4].childNodes[0].childNodes[1].innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i>';
-    
-    refTr.cells[1].firstChild.focus();
+    refBtn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i>';
+    refBtn.removeEventListener("click", refUserEvent);
+    refBtn.setAttribute("onclick", "refUserUpload(this)");
 
-    /*let data = {
+    refTr.cells[1].firstChild.focus();
+}
+
+function refUserUpload(event) {
+    let refTr = event.parentElement.parentElement.parentElement;
+    let refBtn = refTr.querySelector("[name='refButton']");
+
+    for (let k of refTr.cells) {
+        if (k.firstChild.name == "name" ||
+            k.firstChild.name == "email" ||
+            k.firstChild.name == "age") {
+            k.firstChild.disabled = true;
+        }
+    }
+
+    refBtn.innerHTML = '<i class="fa-solid fa-arrows-rotate"></i>';
+    refBtn.removeEventListener("click", refUserUpload);
+    refBtn.setAttribute("onclick", "refUserEvent(this)");
+
+     let data = {
         id: refTr.cells[0].firstChild.value,
         name: refTr.cells[1].firstChild.value,
         email: refTr.cells[2].firstChild.value,
         age: refTr.cells[3].firstChild.value
-    }*/
-}
+    }
+    refUser(data);
 
-function refUserUpload(event){
-    console.log(this);
 }
 
 //Get User Button click EVENT !!!
